@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./src/main/resources/db/pokemontcgcards
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+  flyway:
+    locations: classpath:db/migration
+  h2:
+    console:
+      enabled: true
+  mvc:
+    servlet:
+      path: /pokemon/v1/tcg/
+  jpa:
+    show-sql: true
